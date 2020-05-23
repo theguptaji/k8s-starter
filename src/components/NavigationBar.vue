@@ -16,7 +16,7 @@
           <v-list-item two-line >
               <v-list-item-title>
                   <v-list-item-icon>
-                <v-icon v-text="title_icon"></v-icon>
+                <v-icon color="success">mdi-arrow-left</v-icon>
                     </v-list-item-icon>
                   Chapters
               </v-list-item-title>      
@@ -30,7 +30,7 @@
             link
           >
             <v-list-item-icon>
-                <v-icon v-text="level.icon"></v-icon>
+                <v-icon color="success" v-text="level.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>{{ level.title }}</v-list-item-title>
@@ -48,7 +48,6 @@
       return {
         drawer: true,
         levels: levels,
-        title_icon: 'mdi-arrow-left',
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-container fluid>
+      <v-container>
           <navigation-bar />
           <main-board />
           <editor-board />
@@ -21,9 +21,5 @@ export default {
     MainBoard,
     EditorBoard,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>

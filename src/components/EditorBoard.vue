@@ -1,16 +1,22 @@
 <template>
   <v-row 
-   class="grey lighten-5" 
-   style="height: 50vh;">  
-    <div class="editor">
+   class="grey lighten-3" 
+   style="height: 50vh;" >  
+    <v-col cols=6>
         <codemirror
         ref="cmEditor"
         :value="code"
         :options="cmOptions"
         @ready="onCmReady"
         @focus="onCmFocus"
-        @input="onCmCodeChange"/>
-    </div>
+        @input="onCmCodeChange"
+        />
+    </v-col>
+    <v-col cols=6>
+        <div class="info-board">
+            Pass the problem statement here as props
+        </div> 
+    </v-col>
   </v-row>
 </template>
 
@@ -64,11 +70,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.editor {
-      width: 50%;
-      height: 100%;
-      margin: 0;
-      overflow: auto;
-    }
+<style>
+.info-board,
+.CodeMirror {
+      height: 48vh;    
+}
+
 </style>
