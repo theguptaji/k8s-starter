@@ -65,7 +65,7 @@ export const levels = [
     },
     {
         title : "How developer works",
-        icon: 'mdi-developer-board',
+        icon: 'mdi-code-braces',
     },
     {
         title : "problems in last chapter",
