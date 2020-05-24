@@ -10,7 +10,7 @@
 * Setup third party library for animation area ⏳👨🏼‍💻💪🏼
 * State management via vuex 👨🏼‍💻💪🏼
 
-***
+
 
 ## animation area
 * Iterate over `elements` in a chapter.
@@ -18,7 +18,7 @@
 * All cards are movable.
 * Each card has propery to hook it to other card.
 
-***
+
 
 ## State management
 * site loads with a welcome screen, which has proceed button.
@@ -27,7 +27,7 @@
 * Data on `main-board` and `editor-board` changes when chapter is changed.
 * Chapter class becomes `active` in navbar when it is chosen.
 
-***
+
 
 ## Data
 * A js array of objects, where object is of format:
@@ -77,25 +77,37 @@
     }
 ```
 
-***
+
 
 ## chapters
 
 follow CKAD curriculum
-* How web works 1 : `browser --> server`
-* How web works 2 : `browser --> server --> db`
-* How web works 3 : `browser --> auth --> server --> db `
-* How web works 4 : `millions of browser --> distributed auth --> distributed server --> distributed db` 
-* How developer works 1 : `github --> deploy in distributed auth --> deploy in distributed server --> deploy in distributed db` 
-* problems in last : `github --> deploy in distributed auth --> deploy in distributed server --> deploy in distributed db` 
-* kubernetes deployment : `github --> deployment auth --> deployment server --> deployment db`
-* How k8s work 1 : `front end developer --> write code --> Containerize it --> edit deployment`
-* How k8s work 2 : `back end developer --> write code --> Containerize it --> edit deployment`
-* Pods and deployments : `container --> pod --> vm`
-* services and ingress : `pod --> svc --> ingress --> world`
-* Rolling updates : `code --> container-tag --> deployment`
+* How web works 1 :   
+`browser --> server`
+* How web works 2 :   
+`browser --> server --> db`
+* How web works 3 :   
+`browser --> auth --> server --> db `
+* How web works 4 :   
+`millions of browser --> distributed auth --> distributed server --> distributed db` 
+* How developer works 1 :   
+`github --> deploy in distributed auth --> deploy in distributed server --> deploy in distributed db` 
+* problems in last :   
+`github --> deploy in distributed auth --> deploy in distributed server --> deploy in distributed db` 
+* kubernetes deployment :   
+`github --> deployment auth --> deployment server --> deployment db`
+* How k8s work 1 :   
+`front end developer --> write code --> Containerize it --> edit deployment`
+* How k8s work 2 :   
+`back end developer --> write code --> Containerize it --> edit deployment`
+* Pods and deployments :   
+`container --> pod --> vm`
+* services and ingress :   
+`pod --> svc --> ingress --> world`
+* Rolling updates :   
+`code --> container-tag --> deployment`
 
-***
+
 
 ## Project setup
 ```
