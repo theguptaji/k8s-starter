@@ -71,7 +71,7 @@ export default {
 <style>
 .info-board,
 .CodeMirror {
-      height: 48vh;    
+      height: 47vh;    
 }
 
 </style>
