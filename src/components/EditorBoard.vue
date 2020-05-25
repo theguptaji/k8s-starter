@@ -27,8 +27,6 @@ import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/base16-dark.css'
 
-// import more codemirror resource...
-
 export default {
     components: {
         codemirror
