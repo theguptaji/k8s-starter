@@ -24,7 +24,7 @@
 
           <v-divider></v-divider>
 
-          <v-list-item v-for="(level,i) in levels"
+          <v-list-item v-for="(level,i) in $store.state.levels"
             :key="i"
             link>
             <v-list-item-icon>
