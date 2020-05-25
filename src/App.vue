@@ -1,6 +1,6 @@
 <template>
   <v-app>
-      <v-container>
+      <v-container class="pa-0">
           <navigation-bar />
           <main-board />
           <editor-board />
