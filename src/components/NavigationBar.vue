@@ -24,11 +24,9 @@
 
           <v-divider></v-divider>
 
-          <v-list-item
-            v-for="(level,i) in levels"
+          <v-list-item v-for="(level,i) in levels"
             :key="i"
-            link
-          >
+            link>
             <v-list-item-icon>
                 <v-icon color="success" v-text="level.icon"></v-icon>
             </v-list-item-icon>
@@ -36,18 +34,18 @@
               <v-list-item-title>{{ level.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+          
         </v-list>
       </v-navigation-drawer>
   </v-container>
 </template>
 
 <script>
-    import { levels } from "@/data/levels.js";
+
   export default {
     data () {
       return {
         drawer: true,
-        levels: levels,
       }
     }
   }
