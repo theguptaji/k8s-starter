@@ -7,8 +7,10 @@
 * Layout has a navigation area on the right which is hidable 🚀🏁
 * Setup third party library for code editor 🚀🏁
 * Create basic chapter structure 🚀🏁
-* Setup third party library for animation area ⏳👨🏼‍💻💪🏼
-* State management via vuex 👨🏼‍💻💪🏼
+* Setup third party library for animation area - flowchart-vue 🚀🏁
+* State management via vuex 🚀🏁
+* Access data via `mapGetters` and `mapActions` 💪🏼👨🏼‍💻⏳
+* Add methods for rendering the nodes to the main board 💪🏼👨🏼‍💻⏳
 
 
 
@@ -36,27 +38,9 @@
         title: "How web works 1",
         icon: 'mdi-webhook',
         elements: [
-            {
-                element: "app-user(client)",
-                id: 1,
-                color: "blue",
-                position: 1,
-                image: "x"
-            },
-            {
-                element: "node-app",
-                id: 2,
-                color: "green",
-                position: 3,
-                image: "y"
-            },
-            {
-                element: "auth-app",
-                id: 3,
-                color: "green",
-                position: 4,
-                image: "z"
-            },
+            {id: 1, x: 100, y: 130, name: 'NoSql', type: 'db'},
+            {id: 2, x: 140, y: 130, name: 'User', type: 'client'},
+            {id: 3, x: 180, y: 130, name: 'Server', type: 'server'},
         ],
 
         explaination: {
@@ -68,10 +52,13 @@
             statement : "fix the relation of given scenario"
         },
     
-        correctPositions: [
-            {id: 1,position: 2},
-            {id: 2,position: 3},
-            {id: 3,position: 4}
+        connections: [
+          {
+            source: {id: 1, position: 'right'},
+            destination: {id: 2, position: 'left'},
+            id: 1,
+            type: 'pass',
+          },
         ]
     
     }
