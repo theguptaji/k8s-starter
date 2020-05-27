@@ -7,15 +7,25 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         levels: levels,
-        currentChapter: 0
-    },
-    mutations: {
-
-    },
-    actions: {
-
+        level: 0
     },
     getters: {
+        getAllLevels : state => {
+            return state.levels
+        },
+        getCurrentLevel : state => {
+            return state.levels[state.level]
+        },
+        getCurrentLevelId : state => {
+            return state.level
+        }
+    },
+    mutations: {
+        CURRENT_LEVEL_ID : (state, levelId) => {
+            state.level = levelId
+        }
+    },
+    actions: {
 
     }
 })

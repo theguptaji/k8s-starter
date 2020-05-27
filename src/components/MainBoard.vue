@@ -10,6 +10,7 @@
         type="button" @click="$refs.chart.editCurrent()">Edit</v-btn>
         <v-btn class="ma-2" outlined small color="primary"
         type="button" @click="$refs.chart.save()">Save</v-btn>
+        <div class="ml-2 headline"> {{ level.title }}</div>
       <flowchart :nodes="nodes" :connections="connections" @editnode="handleEditNode"
                    :width="'100%'" :height="'85%'" :readonly="false"
                    @dblclick="handleDblClick"
@@ -22,11 +23,12 @@
 <script>
   import Vue from 'vue';
   import FlowChart from 'flowchart-vue';
+  import { mapGetters } from 'vuex'
 
   Vue.use(FlowChart);
 
   export default {
-    data: function() {
+    data () {
       return {
         nodes: [
           {id: 1, x: 180, y: 130, name: 'Start', type: 'start'},
@@ -41,6 +43,11 @@
           },
         ],
       };
+    },
+    computed: {
+      ...mapGetters({
+        level : 'getCurrentLevel',
+      })
     },
     methods: {
       handleChartSave(nodes, connections) {

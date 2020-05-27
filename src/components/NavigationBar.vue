@@ -23,9 +23,9 @@
           </v-list-item>
 
           <v-divider></v-divider>
-
-          <v-list-item v-for="(level,i) in $store.state.levels"
-            :key="i"
+      <v-list-item-group v-model="levelId" color="primary" @change="CURRENT_LEVEL_ID">
+          <v-list-item v-for="(level,levelId) in levels"
+            :key="levelId"
             link>
             <v-list-item-icon>
                 <v-icon color="success" v-text="level.icon"></v-icon>
@@ -34,6 +34,7 @@
               <v-list-item-title>{{ level.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+      </v-list-item-group>
           
         </v-list>
       </v-navigation-drawer>
@@ -41,12 +42,25 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 
   export default {
     data () {
       return {
         drawer: true,
+        levelId: this.$store.state.level
       }
+    },
+    computed: {
+      ...mapGetters({
+        level : 'getCurrentLevelId',
+        levels : 'getAllLevels',
+      })
+    },
+    methods: {
+      ...mapMutations([
+        'CURRENT_LEVEL_ID'
+      ])
     }
   }
 </script>

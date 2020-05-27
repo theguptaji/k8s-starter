@@ -14,7 +14,7 @@
     </v-col>
     <v-col cols=6>
         <div class="info-board">
-            Pass the problem statement here as props
+            <div class="black--text"> {{ level.problem.statement }} </div>
         </div> 
     </v-col>
   </v-row>
@@ -22,6 +22,7 @@
 
 <script>
 import { codemirror } from 'vue-codemirror'
+import { mapGetters } from 'vuex'
 
 // import base style
 import 'codemirror/lib/codemirror.css'
@@ -59,7 +60,10 @@ export default {
   computed: {
     codemirror() {
       return this.$refs.cmEditor.codemirror
-    }
+    },
+    ...mapGetters({
+        level : 'getCurrentLevel',
+      })
   },
   mounted() {
     console.log('the current CodeMirror instance object:', this.codemirror)
