@@ -9,13 +9,23 @@ export default new Vuex.Store({
         levels: levels,
         level: 0
     },
+    getters: {
+        getAllLevels : state => {
+            return state.levels
+        },
+        getCurrentLevel : state => {
+            return state.levels[state.level]
+        },
+        getCurrentLevelId : state => {
+            return state.level
+        }
+    },
     mutations: {
-
+        CURRENT_LEVEL_ID : (state, levelId) => {
+            state.level = levelId
+        }
     },
     actions: {
-
-    },
-    getters: {
 
     }
 })
