@@ -23,7 +23,7 @@
           </v-list-item>
 
           <v-divider></v-divider>
-
+      <v-list-item-group v-model="level" color="primary">
           <v-list-item v-for="(level,i) in $store.state.levels"
             :key="i"
             link>
@@ -34,6 +34,7 @@
               <v-list-item-title>{{ level.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+      </v-list-item-group>
           
         </v-list>
       </v-navigation-drawer>
@@ -46,7 +47,13 @@
     data () {
       return {
         drawer: true,
+        level: 0,
       }
+    },
+    computed: {
+        set(val) {
+          return this.$store.commit('level', val)
+        }
     }
   }
 </script>

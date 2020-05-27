@@ -33,7 +33,7 @@
 
 ## Data
 * A js array of objects, where object is of format:
-```
+```js
 {
         title: "How web works 1",
         icon: 'mdi-webhook',

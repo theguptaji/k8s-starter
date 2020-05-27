@@ -10,6 +10,7 @@
         type="button" @click="$refs.chart.editCurrent()">Edit</v-btn>
         <v-btn class="ma-2" outlined small color="primary"
         type="button" @click="$refs.chart.save()">Save</v-btn>
+        <div class="ml-2 headline">Chapter-1</div>
       <flowchart :nodes="nodes" :connections="connections" @editnode="handleEditNode"
                    :width="'100%'" :height="'85%'" :readonly="false"
                    @dblclick="handleDblClick"
