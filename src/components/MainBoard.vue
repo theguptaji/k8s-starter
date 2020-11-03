@@ -11,7 +11,7 @@
         <v-btn class="ma-2" outlined small color="primary"
         type="button" @click="$refs.chart.save()">Save</v-btn>
         <div class="ml-2 headline"> {{ level.title }}</div>
-      <flowchart :nodes="nodes" :connections="connections" @editnode="handleEditNode"
+      <flowchart :nodes="level.nodes" :connections="level.connections" @editnode="handleEditNode"
                    :width="'100%'" :height="'85%'" :readonly="false"
                    @dblclick="handleDblClick"
                    @editconnection="handleEditConnection" @save="handleChartSave" ref="chart">

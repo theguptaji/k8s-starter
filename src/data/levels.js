@@ -2,28 +2,10 @@ export const levels = [
     {
         title: "How web works 1",
         icon: 'mdi-webhook',
-        elements: [
-            {
-                element: "app-user(client)",
-                id: 1,
-                color: "blue",
-                position: 1,
-                image: "x"
-            },
-            {
-                element: "node-app",
-                id: 2,
-                color: "green",
-                position: 3,
-                image: "y"
-            },
-            {
-                element: "auth-app",
-                id: 3,
-                color: "green",
-                position: 4,
-                image: "z"
-            },
+        nodes: [
+            {id: 1, x: 100, y: 130, name: 'NoSql', type: 'start'},
+            {id: 2, x: 360, y: 130, name: 'User', type: 'client'},
+            {id: 3, x: 650, y: 130, name: 'Server', type: 'end'},
         ],
 
         explaination: {
@@ -35,20 +17,20 @@ export const levels = [
             statement : "fix the relation of given scenario"
         },
     
-        correctPositions: [
+        connections: [
             {
-                id: 1, 
-                position: 2
+                source: {id: 1, position: 'right'},
+                destination: {id: 2, position: 'left'},
+                id: 1,
+                type: 'pass',
             },
             {
-                id: 2, 
-                position: 3
-            },
-            {
-                id: 3, 
-                position: 4
-            }
-        ]
+                source: {id: 2, position: 'right'},
+                destination: {id: 3, position: 'left'},
+                id: 2,
+                type: 'pass',
+                },
+          ]
     
     },
     {
